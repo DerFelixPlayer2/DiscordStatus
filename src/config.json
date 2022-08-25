@@ -1,0 +1,20 @@
+{
+	"main": "index.js",
+	"info": {
+		"name": "DiscordStatus",
+		"authors": [
+			{
+				"name": "DerFelixPlayer2",
+				"github_username": "DerFelixPlayer2",
+				"discord_id": "304247325629480971",
+				"link": "https://github.com/DerFelixPlayer2"
+			}
+		],
+		"version": "0.1.0",
+		"description": "Sets status to online on start and invisible on stop.",
+		"github": "https://github.com/DerFelixPlayer2/DiscordStatus",
+		"github_raw": ""
+	},
+	"changelog": [],
+	"defaultConfig": []
+}

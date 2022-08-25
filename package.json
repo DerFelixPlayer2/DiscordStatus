@@ -1,0 +1,30 @@
+{
+	"name": "discordstatus",
+	"version": "0.1.0",
+	"description": "Sets status to online on start and invisible on stop.",
+	"scripts": {
+		"test": "echo \"Error: no test specified\" && exit 1",
+		"__comment__": "adapted from rauenzi/BDPluginLibrary",
+		"build_plugin": "node ./build_scripts/build.js"
+	},
+	"repository": {
+		"type": "git",
+		"url": "git+https://github.com/DerFelixPlayer2/DiscordStatus.git"
+	},
+	"defaultConfig": {
+		"pluginsFolder": "./src",
+		"releaseFolder": "./release",
+		"copyToBD": false,
+		"addInstallScript": true
+	},
+	"author": "DerFelixPlayer2",
+	"license": "MIT",
+	"bugs": {
+		"url": "https://github.com/DerFelixPlayer2/DiscordStatus/issues"
+	},
+	"homepage": "https://github.com/DerFelixPlayer2/DiscordStatus#readme",
+	"devDependencies": {
+		"@types/bandagedbd__bdapi": "^0.3.3",
+		"@types/node": "^18.7.13"
+	}
+}
