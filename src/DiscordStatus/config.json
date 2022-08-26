@@ -1,7 +1,7 @@
 {
 	"main": "index.js",
 	"info": {
-		"name": "DiscordStatus",
+		"name": 	"DiscordStatus",
 		"authors": [
 			{
 				"name": "DerFelixPlayer2",
@@ -15,6 +15,5 @@
 		"github": "https://github.com/DerFelixPlayer2/DiscordStatus",
 		"github_raw": ""
 	},
-	"changelog": [],
-	"defaultConfig": []
+	"changelog": [{ "title": "Release", "items": ["Initial Release"] }]
 }

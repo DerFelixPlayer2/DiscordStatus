@@ -1,5 +1,0 @@
-{
-  "include": [
-    "../BDPluginLibrary/src/**/*"
-  ]
-}

@@ -5,14 +5,14 @@
 	"scripts": {
 		"test": "echo \"Error: no test specified\" && exit 1",
 		"__comment__": "adapted from rauenzi/BDPluginLibrary",
-		"build_plugin": "node ./build_scripts/build.js"
+		"build_plugin": "tsc && node ./scripts/build.js"
 	},
 	"repository": {
 		"type": "git",
 		"url": "git+https://github.com/DerFelixPlayer2/DiscordStatus.git"
 	},
 	"defaultConfig": {
-		"pluginsFolder": "./src",
+		"pluginsFolder": "./dist",
 		"releaseFolder": "./release",
 		"copyToBD": false,
 		"addInstallScript": true
