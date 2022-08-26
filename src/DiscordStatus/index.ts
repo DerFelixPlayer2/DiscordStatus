@@ -7,31 +7,44 @@ module.exports = (Plugin, Library) => {
   const StatusSetting = BdApi.findModuleByProps("StatusSetting").StatusSetting;
 
   return class DiscordStatus extends Plugin {
+    private closeBtn: HTMLButtonElement;
+
     onStart(): void {
-      if (this.currentStatus() !== "online") {
-        this.updateStatus("online");
+      if (currentStatus() !== "online") {
+        updateStatus("online");
       }
-      this.log_debug("Started");
+
+      log_debug(document.getElementsByClassName("winButtonClose-3Q8ZH5").length)
+      this.closeBtn = document.getElementsByClassName("winButtonClose-3Q8ZH5")[0] as HTMLButtonElement;
+      this.closeBtn.addEventListener("click", invis);
     }
 
     onStop(): void {
-      if (this.currentStatus() !== "invisible") {
-        this.updateStatus("invisible");
-      }
-      this.log_debug("Stopped");
+      removeListener(this.closeBtn, "click", invis);
+      invis();
     }
+  }
 
-    private currentStatus(): Status {
-      return StatusSetting.getSetting();
-    }
+  function removeListener(el: Element, event: string, fun: EventListenerOrEventListenerObject): void {
+    el.removeEventListener(event, fun)
+  }
 
-    private log_debug(message: string): void {
-      Logger.log(message);
+  function invis() {
+    if (currentStatus() !== "invisible") {
+      updateStatus("invisible");
     }
+  }
 
-    private updateStatus(toStatus: Status): void {
-      this.log_debug("Changing status to: " + toStatus);
-      StatusSetting.updateSetting(toStatus);
-    }
+  function currentStatus(): Status {
+    return StatusSetting.getSetting();
+  }
+
+  function log_debug(message: { toString: () => string }): void {
+    Logger.log(message.toString());
+  }
+
+  function updateStatus(toStatus: Status): void {
+    log_debug("Changing status to: " + toStatus);
+    StatusSetting.updateSetting(toStatus);
   }
 };
