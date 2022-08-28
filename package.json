@@ -11,6 +11,7 @@
 		"type": "git",
 		"url": "git+https://github.com/DerFelixPlayer2/DiscordStatus.git"
 	},
+	"private": true,
 	"defaultConfig": {
 		"pluginsFolder": "./dist",
 		"releaseFolder": "./release",
